@@ -1,0 +1,26 @@
+<h2 class="text-dark mb-3"> Video Ideas</h2>
+{{#if successMsg}}
+<div class="alert alert-success">
+    {{successMsg}}
+</div>
+{{/if}}
+{{#if errorMsg}}
+<div class="alert alert-danger">
+    {{errorMsg}}
+</div>
+{{/if}}
+
+{{#each ideas}}
+<div class="card mb-3">
+    <div class="card-body">
+        <h3>{{this.title}}</h3>
+        <p>{{this.details}}</p>
+        <a href="/ideas/edit/{{this._id}}" class="btn btn-block btn-dark mb-2">Edit</a>
+        <form method="post" action="/ideas/{{this._id}}?_method=DELETE">
+            <input type="submit" value="Delete" class="btn btn-block btn-danger">
+        </form>
+    </div>
+</div>
+{{else}}
+<p>There are No Video Ideas</p>
+{{/each}}

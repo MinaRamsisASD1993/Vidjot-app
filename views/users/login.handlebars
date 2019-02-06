@@ -1,0 +1,39 @@
+{{#if successMsg}}
+<div class="alert alert-success">
+    {{successMsg}}
+</div>
+{{/if}}
+{{#if errorMsg}}
+<div class="alert alert-danger">
+    {{errorMsg}}
+</div>
+{{/if}}
+
+{{!-- error is by passport --}}
+{{#if error}}
+<div class="alert alert-danger">
+    {{error}}
+</div>
+{{/if}}
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center">Account Login</h2>
+                <img src="/imgs/logo.png" class="d-block mx-auto img-fluid imgLogo">
+                <form action="/users/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" required>
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-primary btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

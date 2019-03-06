@@ -14,7 +14,7 @@
             console.log('Confirm Btn Pressed');
             const checkboxElement = document.querySelector('.fb-messenger-checkbox');
             console.log(checkboxElement);
-            console.log('user_ref: ' + checkboxElement.user_ref);
+            console.log('user_ref: ' + checkboxElement.getAttribute('user_ref'));
             FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
                 'app_id': '2429520900657336',
                 'page_id': '139271929820098',

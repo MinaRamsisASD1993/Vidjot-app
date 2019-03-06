@@ -6,6 +6,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const mongoose = require("mongoose");
+const uuidv4 = require("uuid/v4");
 const app = express();
 
 const keys = require("./config/keys");
@@ -58,7 +59,9 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    uniqueID: uuidv4()
+  });
 });
 
 app.get("/about", (req, res) => {

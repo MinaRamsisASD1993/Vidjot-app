@@ -9,13 +9,9 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Vidjot App</title>
-    {{!-- <script>
-
-    </script> --}}
 </head>
 
 <body>
-
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
@@ -53,7 +49,6 @@
         function confirmOptIn() {
             console.log('Confirm Btn Pressed');
             const checkboxElement = document.querySelector('.fb-messenger-checkbox');
-            //console.log(checkboxElement);
             const user_ref = checkboxElement.getAttribute('user_ref');
 
             console.log('user_ref: ' + checkboxElement.getAttribute('user_ref'));
@@ -67,7 +62,6 @@
     </script>
     <!-- Your customer chat code -->
     <div class="fb-customerchat" attribution="setup_tool" page_id="139271929820098" theme_color="#0084ff"></div>
-
 
     {{> _navbar}}
     <div class="container">

@@ -9,7 +9,7 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Vidjot App</title>
-    {{!-- <script>
+    <script>
         function confirmOptIn() {
             FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
                 'app_id': '2429520900657336',
@@ -18,8 +18,7 @@
                 'user_ref': '123456'
             });
         }
-    </script> --}}
-
+    </script>
 </head>
 
 <body>
@@ -48,7 +47,6 @@
                 }
             });
         };
-        //IIFE 
         (function (d, s, id) {
             var js,
                 fjs = d.getElementsByTagName(s)[0];
@@ -59,15 +57,11 @@
             fjs.parentNode.insertBefore(js, fjs);
         })(document, "script", "facebook-jssdk");
     </script>
-
     <!-- Your customer chat code -->
     <div class="fb-customerchat" attribution="setup_tool" page_id="139271929820098" theme_color="#0084ff"></div>
     {{!-- Check-box plugin --}}
-    {{!-- user_ref param should be unique --}}
-    {{!--  If the parameter is not unique, then the plugin may not render. --}}
     <div class="fb-messenger-checkbox" origin="https://quiet-mountain-63725.herokuapp.com/" page_id="139271929820098"
-        messenger_app_id="2429520900657336" user_ref="1548963215" size="large" prechecked="true" allow_login="true"
-        skin="light" center_align="true">
+        messenger_app_id="2429520900657336" user_ref="123456" size="large" skin="light" center_align="true">
     </div>
 
     {{> _navbar}}

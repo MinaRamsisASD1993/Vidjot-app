@@ -21,6 +21,15 @@
                 version: "v3.2"
             });
         };
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.likes',
+            action_properties: JSON.stringify({
+                object: 'https://developers.facebook.com/docs/javascript/examples',
+            })
+        }, function (response) {
+            console.log(response);
+        });
 
         (function (d, s, id) {
             var js,

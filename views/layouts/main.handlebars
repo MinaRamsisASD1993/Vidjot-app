@@ -11,10 +11,14 @@
     <title>Vidjot App</title>
     <script>
         function confirmOptIn() {
+            console.log('Confirm Btn Pressed');
+            const checkboxElement = document.querySelector('.fb-messenger-checkbox');
+            console.log(checkboxElement);
+            console.log('user_ref: ' + checkboxElement.user_ref);
             FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
                 'app_id': '2429520900657336',
                 'page_id': '139271929820098',
-                'ref': '<PASS_THROUGH_PARAM>',
+                'ref': 'elagate_user',
                 'user_ref': '54687899'
             });
         }

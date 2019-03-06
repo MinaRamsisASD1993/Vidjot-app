@@ -6,10 +6,25 @@
 
 
 
-{{!-- Check-box plugin --}}
-<div class="fb-messenger-checkbox" origin="https://quiet-mountain-63725.herokuapp.com/" page_id="139271929820098"
-    messenger_app_id="2429520900657336" user_ref="{{uniqueID}}" size="large" skin="light" center_align="true"
-    prechecked="true" allow_login="true">
-</div>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Information About You</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            {{!-- Check-box plugin --}}
+            <div class="fb-messenger-checkbox" origin="https://quiet-mountain-63725.herokuapp.com/"
+                page_id="139271929820098" messenger_app_id="2429520900657336" user_ref="{{uniqueID}}" size="large"
+                skin="light" center_align="true" allow_login="true">
+            </div>
 
-<input type="button" onclick="confirmOptIn()" value="Confirm Opt-in" />
+            <input type="button" onclick="confirmOptIn()" value="Confirm Opt-in" class="btn btn-primary" />
+        </form>
+    </div>
+</div>

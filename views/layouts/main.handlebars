@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <h3>hhh</h3>
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
@@ -36,6 +37,7 @@
                 }
             });
         };
+        //  You should insert it directly after the opening body tag on each page you want to load it...
         (function (d, s, id) {
             var js,
                 fjs = d.getElementsByTagName(s)[0];
@@ -55,10 +57,10 @@
             FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
                 'app_id': '2429520900657336',
                 'page_id': '139271929820098',
-                'ref': 'elagate_user',
+                'ref': 'elagate_user',  //optional
                 'user_ref': user_ref
             });
-        }
+        } 
     </script>
     <!-- Your customer chat code -->
     <div class="fb-customerchat" attribution="setup_tool" page_id="139271929820098" theme_color="#0084ff"></div>
